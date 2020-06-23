@@ -1,0 +1,46 @@
+---
+name: Modal
+route: /Modal
+sidebar: true
+---
+
+import { Playground } from 'docz'
+import Modal from './react';
+
+# Modal
+
+## Basic usage
+
+<Playground>
+  <Modal />
+</Playground>
+
+## Properties
+
+| 属性 | 说明 | 类型 | 默认值 |
+| ---- | ---- | ---- | ---- |
+| className | 自定义样式 | string，只支持 CSS Module | 无 |
+| width | 弹窗宽度 | number 或 string | 600 |
+| visible | 弹窗是否可见 | bool | false |
+| hideHeader | 是否隐藏头部 | bool | false |
+| hideFooter | 是否隐藏底部 | bool | false |
+| okText | okButton 的文字 | string 或 ReactNode | 无 |
+| cancelText | cancelButton 的文字 | string 或 ReactNode | 无 |
+| okButtonType | okButton 的类型，可选值为 'default', 'primary', 'control', 'danger', 'flat' | string | 'control' |
+| cancelButtonType | cancelButton，可选值为 'default', 'primary', 'control', 'danger', 'flat' 的类型 | string | 'default' |
+| closable | 是否显示头部右侧的关闭按钮 | bool | true |
+| operations | 额外的操作区域 | ReactNode | 无 |
+| headerClassName | 头部样式，只支持 CSS Module | string | 无 |
+| bodyClassName | 主体样式，只支持 CSS Module | string | 无 |
+| footerClassName | 底部样式，只支持 CSS Module | string | 无 |
+| fullScreen | 是否占据整屏 | bool | false |
+| rightScreen | 是否只占据右侧屏幕 | bool | false |
+| maskClosable | 是否可通过点击蒙层关闭弹窗 | bool | true |
+| isSubmitting | okButton 是否展示加载动画 | bool | false |
+| icon | 头部左侧图标类型 | string | 无 |
+| imageSrc | 头部左侧图片类头像的资源地址 | string | 无 |
+| disableSubmit | okButton 是否禁用 | bool | false |
+| title | 头部信息 | string 或 ReactNode | 无 |
+| description | 头部描述信息 | string 或 ReactNode | 无 |
+| onCancel | cancelButton 点击的回调 | func | 无 |
+| onOk | okButton 点击的回调 | func | 无 |

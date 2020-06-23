@@ -1,0 +1,56 @@
+---
+name: Avatar
+route: /Avatar
+sidebar: true
+---
+
+import { Playground } from 'docz'
+import img from '../../assets/yay.jpg'
+import Avatar from './index';
+
+# Avatar
+
+## Basic usage
+
+<Playground>
+  <Avatar
+    title="title"
+    description="description"
+  />
+  <br />
+  <Avatar
+    src={img}
+    imgSize={80}
+    title="title"
+    description="description"
+  />
+  <br />
+  <Avatar
+    icon="user"
+    size={40}
+    title="title"
+    description="description"
+  />
+  <br />
+  <Avatar
+    icon="user"
+    shape="square"
+    size={40}
+    title="title"
+    description="description"
+  />
+</Playground>
+
+## Properties
+
+| 属性 | 说明 | 类型 | 默认值 |
+| ---- | ---- | ---- | ---- |
+| imgSize | 图片大小 | number | 无 |
+| src | 图片类头像的资源地址 | string | 无 |
+| icon | 图标类型。遵循图标的命名规范 | string | 无 |
+| size | 图标大小 | number | 20 |
+| shape | 指定头像的形状 | string, 可选值为'circle', 'square' | 'circle' |
+| title | Avatar 的 提示信息 | string 或 ReactNode | 无 |
+| description | Avatar 的 描述信息 | string 或 ReactNode | 无 |
+| to | 跳转地址 | string | 无 |
+| alt | 图片加载失败的替换文字 | string | 无 |

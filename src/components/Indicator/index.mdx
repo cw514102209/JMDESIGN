@@ -1,0 +1,32 @@
+---
+name: Indicator
+route: /Indicator
+sidebar: true
+---
+
+import { Playground } from 'docz'
+import Indicator from './index';
+
+# Indicator
+
+## Basic usage
+
+<Playground>
+  <Indicator type="creating" />
+  <br />
+  <Indicator type="success" />
+  <br />
+  <Indicator type="warning" />
+  <br />
+  <Indicator type="failed" />
+  <br />
+  <Indicator type="warning" flicker />
+</Playground>
+
+## Properties
+
+| 属性 | 说明 | 类型 | 默认值 |
+| ---- | ---- | ---- | ---- |
+| className | 自定义样式 | string，只支持 CSS Module | 无 |
+| type | 指示符的类型，可选值为 'creating'， 'success'， 'warning'， 'error'， 'completed' | string | 'success' |
+| flicker | 是否闪烁，只支持 type 为 'success' 的指示符 | bool | false |

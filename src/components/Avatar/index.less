@@ -1,0 +1,56 @@
+@import '../../less/variables.less';
+
+.jm_avatar_wrapper {
+  position: relative;
+  display: flex;
+  opacity: 0.6;
+}
+
+.jm_avatar_image {
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
+  border-radius: 50%;
+  border: solid 2px @white;
+}
+
+.jm_avatar_icon {
+  padding: 5px;
+  border-radius: 100px;
+  background-color: #cccccc;
+
+  // .anticon {
+  //   padding: 0px !important;
+  // }
+}
+
+.jm_avatar_square {
+  border-radius: 4px;
+}
+
+.jm_avatar_text {
+  flex: 1;
+  margin-left: 10px;
+
+  .jm_avatar_title {
+    font-size: @size-small;
+    line-height: 1.67;
+    font-weight: bold;
+    color: @dark-color07;
+  }
+
+  .jm_avatar_description {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    overflow: hidden;
+    font-size: @size-small;
+    line-height: 1.67;
+    color: @dark-color01;
+    max-width: 300px;
+  }
+}
+
+.jm_avatar_link {
+  opacity: 1;
+}

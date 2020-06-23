@@ -1,0 +1,43 @@
+---
+name: Button
+route: /Button
+sidebar: true
+---
+
+import { Playground } from 'docz'
+import Button from './index';
+
+# Button
+
+## Basic usage
+
+<Playground>
+  <Button icon="edit">default</Button>
+  <Button type="primary" icon="form">primary</Button>
+  <Button type="control" icon="copy">control</Button>
+  <Button type="danger" icon="delete">danger</Button>
+  <Button type="flat" icon="global">flat</Button>
+  <br/><br/>
+  <Button loading type="primary" size="small">small size</Button>
+  <Button disabled type="primary">default size</Button>
+  <Button noShadow type="primary" size="large">large size</Button>
+  <br/><br/>
+  <Button type="primary" block>block</Button>
+</Playground>
+
+## Properties
+
+| 属性 | 说明 | 类型 | 默认值 |
+| ---- | ---- | ---- | ---- |
+| className | 自定义样式 | string，只支持 CSS Module | 无 |
+| type | 设置按钮类型，可选值为 'default', 'primary', 'control', 'danger', 'flat' | string | 'default' |
+| htmlType | 设置 button 原生的 type 值，可选值请参考 HTML 标准 | string | 'button' |
+| size | 设置按钮大小，可选值为 'small', 'large', 'normal' | string | 'normal' |
+| icon | 设置头像的图标类型 | string | 无 |
+| iconSize | 图标大小 | number | 无 |
+| loading | 是否显示加载动画 | bool | false |
+| noShadow | 是否不显示阴影 | bool | false |
+| ghost | 是否显示透明背景 | bool | false |
+| block | 将按钮宽度调整为其父宽度的选项 | bool | false |
+
+支持原生 button 的其他所有属性。

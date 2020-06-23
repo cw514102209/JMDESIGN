@@ -1,0 +1,28 @@
+---
+name: Image
+route: /Image
+sidebar: true
+---
+
+import { Playground } from 'docz'
+import Image from './index';
+import image from '../../assets/yay.jpg'
+import './image.css'
+
+# Image
+
+## Basic usage
+
+<Playground>
+  <Image src={image} className="image_img" />
+</Playground>
+
+## Properties
+
+| 属性 | 说明 | 类型 | 默认值 |
+| ---- | ---- | ---- | ---- |
+| className | 自定义样式 | string，只支持 CSS Module | 无 |
+| src | 图片类头像的资源地址 | string | 无 |
+| iconLetter | 替换图片展示的字母 | string | 无 |
+| iconSize |  展示 iconLetter 的大小 | number | 32 |
+| isBase64Str | 是否是 base64 格式 | bool | false |

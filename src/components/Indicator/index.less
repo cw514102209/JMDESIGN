@@ -1,0 +1,117 @@
+@import '../../less/variables.less';
+
+.jm_indicator_icon {
+  display: block;
+  position: relative;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 8.3px;
+    height: 8.3px;
+    border-radius: 50%;
+  }
+
+  &.jm_indicator_draft,
+  &.jm_indicator_pending-review,
+  &.jm_indicator_creating {
+    background-color: rgba(36, 46, 66, 0.1);
+    box-shadow: 0 8px 16px 0 rgba(36, 46, 66, 0.06);
+
+    &::before {
+      background-color: @blue-color03;
+    }
+  }
+
+  &.jm_indicator_success,
+  &.jm_indicator_succeeded,
+  &.jm_indicator_successful,
+  &.jm_indicator_ready,
+  &.jm_indicator_running,
+  &.jm_indicator_active,
+  &.jm_indicator_normal,
+  &.jm_indicator_bound,
+  &.jm_indicator_available,
+  &.jm_indicator_healthy,
+  &.jm_indicator_passed {
+    background-color: rgba(85, 188, 138, 0.1);
+    box-shadow: 0 8px 16px 0 rgba(85, 188, 138, 0.36);
+
+    &::before {
+      background-color: @green;
+    }
+  }
+
+  &.jm_indicator_updating,
+  &.jm_indicator_building,
+  &.jm_indicator_notrunning,
+  &.jm_indicator_warning,
+  &.jm_indicator_waiting,
+  &.jm_indicator_terminating,
+  &.jm_indicator_released,
+  &.jm_indicator_unfinished,
+  &.jm_indicator_major,
+  &.jm_indicator_in-review {
+    background-color: rgba(245, 196, 20, 0.1);
+    box-shadow: 0 8px 16px 0 rgba(245, 196, 20, 0.36);
+
+    &.jm_indicator_flicker {
+      animation: flicker 1.5s linear infinite;
+    }
+
+    &::before {
+      background-color: @yellow-dark;
+    }
+  }
+
+  &.jm_indicator_deleted,
+  &.jm_indicator_error,
+  &.jm_indicator_lost,
+  &.jm_indicator_unschedulable,
+  &.jm_indicator_failed,
+  &.jm_indicator_critical,
+  &.jm_indicator_rejected,
+  &.jm_indicator_deleting {
+    background-color: rgba(202, 38, 33, 0.1);
+    box-shadow: 0 8px 16px 0 rgba(202, 38, 33, 0.2);
+    &::before {
+      background-color: @red-dark;
+    }
+  }
+
+  &.jm_indicator_stopped,
+  &.jm_indicator_disabled,
+  &.jm_indicator_pending,
+  &.jm_indicator_unknown,
+  &.jm_indicator_draining,
+  &.jm_indicator_terminated,
+  &.jm_indicator_completed,
+  &.jm_indicator_minor,
+  &.jm_indicator_suspended {
+    background-color: rgba(134, 146, 157, 0.1);
+    &::before {
+      background-color: #86929d;
+    }
+  }
+}
+
+@keyframes flicker {
+  0% {
+    transform: scale(0.7);
+    opacity: 0.2;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.7);
+    opacity: 0.2;
+  }
+}

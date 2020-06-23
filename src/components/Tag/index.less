@@ -1,0 +1,26 @@
+@import '../../less/variables.less';
+
+.jm_tag_wrapper {
+  display: inline-block;
+  height: 20px;
+  padding: 0 4px;
+  font-size: @size-small;
+  line-height: 20px;
+  font-weight: 600;
+  border-radius: 2px;
+
+  &.jm_tag_default {
+    color: @white;
+    background-color: @dark-color07;
+  }
+
+  &.jm_tag_warning {
+    color: @yellow-color05;
+    background-color: @yellow-color01;
+  }
+
+  &.jm_tag_primary {
+    color: @green-color05;
+    background-color: @green-color01;
+  }
+}

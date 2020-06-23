@@ -1,0 +1,25 @@
+---
+name: Markdown
+route: /Markdown
+sidebar: true
+---
+
+import { Playground } from 'docz'
+import Markdown from './index';
+
+# Markdown
+
+## Basic usage
+
+<Playground>
+  <Markdown source="# some text"/>
+</Playground>
+
+## Properties
+
+| 属性 | 说明 | 类型 | 默认值 |
+| ---- | ---- | ---- | ---- |
+| className | 自定义样式 | string，只支持 CSS Module | 无 |
+| options | markdown-it 的属性 | object | 无 |
+| source | 来源内容 | string | 无 |
+| hideLoading | 是否隐藏加载动画 | bool | false |

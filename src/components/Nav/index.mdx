@@ -1,0 +1,32 @@
+---
+name: Nav
+route: /Nav
+sidebar: true
+---
+
+import { Playground } from 'docz'
+import { Router } from 'react-router-dom'
+import { history } from '../../utils/history'
+import { routes } from './schemas'
+import Nav from './index';
+
+# Nav
+
+## Basic usage
+
+<Playground>
+  <Router history={history}>
+    <Nav match={{ url: 'xxx' }} route={{ routes: routes }} />
+    <br />
+    <Nav isDark match={{ url: 'xxx' }} route={{ routes: routes }} />
+  </Router>
+</Playground>
+
+## Properties
+
+| 属性 | 说明 | 类型 | 默认值 |
+| ---- | ---- | ---- | ---- |
+| className | 自定义样式 | string，只支持 CSS Module | 无 |
+| isDark | 是否展示深色主题 | bool | false |
+| route | Nav 的路由栈信息 | object | {} |
+| match | 增长的路由栈信息 | object | {} |

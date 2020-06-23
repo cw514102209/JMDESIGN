@@ -1,0 +1,30 @@
+---
+name: Status
+route: /Status
+sidebar: true
+---
+
+import { Playground } from 'docz'
+import Status from './index';
+
+# Status
+
+## Basic usage
+
+<Playground>
+  <Status name="name" ready={5} total={100} />
+  <br />
+  <Status flicker type="warning" name="name" ready={90} total={100} />
+</Playground>
+
+## Properties
+
+| 属性 | 说明 | 类型 | 默认值 |
+| ---- | ---- | ---- | ---- |
+| className | 自定义样式 | string，只支持 CSS Module | 无 |
+| style | 外层的样式，只支持 React 样式 | object | 无 |
+| name | Status 的描述信息 | string | 无 |
+| type | 指示符的类型，可选值为 'creating'， 'success'， 'warning'， 'error'， 'completed' | string | 'success' |
+| total | Status 的总数 | number | 100 |
+| ready | Status 的完成数 | number | 0 |
+| flicker | 是否闪烁，只支持 type 为 'success' 的指示符 | bool | false |

@@ -1,0 +1,56 @@
+---
+name: Banner
+route: /Banner
+sidebar: true
+---
+
+import { Playground } from 'docz'
+import Banner from './index';
+import img from '../../assets/yay.jpg'
+
+# Banner
+
+## Basic usage
+
+<Playground>
+  <Banner
+    icon="apple"
+    iconTheme="filled"
+    type="white"
+    title="title"
+    description="description"
+  />
+  <Banner
+    icon="highlight"
+    type="dark"
+    title="title"
+    description="description"
+  />
+  <Banner
+    icon="android"
+    type="purple"
+    title="title"
+    description="description"
+  />
+  <Banner
+    icon="google"
+    rightIcon={img}
+    title="title"
+    description="description"
+    extra="extraextraextraextra"
+  />
+</Playground>
+
+## Properties
+
+| 属性 | 说明 | 类型 | 默认值 |
+| ---- | ---- | ---- | ---- |
+| className | 自定义样式 | string | 无 |
+| iconClass | 图标样式，只支持 CSS Module | string | 无 |
+| type | 图标类型。遵循图标的命名规范 | string， 可选值为 'white', 'light', 'dark', 'purple' | 'light' |
+| icon | 设置头像的图标类型 | string | 'global' |
+| iconTheme | 图标主题风格。可选实心、描线、双色等主题风格，适用于官方图标 | string, 可选值为 'filled', 'outlined' | 'outlined' |
+| title | Banner 的 提示信息 | string | 无 |
+| description | Banner 的 描述信息 | string | 无 |
+| rightIcon | 右侧图标 | string 或 ReactNode | 无 |
+| extra | 右侧额外的操作区域 | string 或 ReactNode | 无 |

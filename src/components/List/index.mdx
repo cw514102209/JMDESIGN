@@ -1,0 +1,34 @@
+---
+name: List
+route: /List
+sidebar: true
+---
+
+import { Playground } from 'docz'
+import List from './react';
+
+# List
+
+## Basic usage
+
+<Playground>
+  <List />
+</Playground>
+
+## Properties
+
+| 属性 | 说明 | 类型 | 默认值 |
+| ---- | ---- | ---- | ---- |
+| className | 自定义样式 | string，只支持 CSS Module | 无 |
+| titleClass | title 样式，只支持 CSS Module |  | 无 |
+| icon | 图标类型。遵循图标的命名规范 | string | 'plus' |
+| image | 图片类头像的资源地址 | string | 无 |
+| title | 列表项的头信息 | string | 无 |
+| status | 显示指示符的类型，可选值为 'creating'， 'success'， 'warning'， 'error'， 'completed' | string | 无 |
+| description | 列表项描述信息 | string | 无 |
+| extras | 额外的列表项补充信息 | string 或 ReactNode | 无 |
+| details | 更详细的列表项信息 | object：{ title, description } | 无 |
+| operations | 自定义操作区域 | ReactNode | 无 |
+| onDelete | 删除列表项的回调 | func | 无 |
+| onEdit | 编辑列表项的回调 | func | 无 |
+| onClick | 点击列表项的回调 | func | 无 |

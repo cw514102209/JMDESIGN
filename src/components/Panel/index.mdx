@@ -1,0 +1,26 @@
+---
+name: Panel
+route: /Panel
+sidebar: true
+---
+
+import { Playground } from 'docz'
+import Panel from './index';
+
+# Panel
+
+## Basic usage
+
+<Playground>
+  <Panel title="title">
+    Panel Content
+  </Panel>
+</Playground>
+
+## Properties
+
+| 属性 | 说明 | 类型 | 默认值 |
+| ---- | ---- | ---- | ---- |
+| className | 自定义样式 | string，只支持 CSS Module | 无 |
+| title | Pannel 的信息 | string 或 ReactNode | 无 |
+| extras | Pannel 的额外信息 | string 或 func 或 ReactNode | 无 |

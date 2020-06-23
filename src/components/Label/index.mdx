@@ -1,0 +1,24 @@
+---
+name: Label
+route: /Label
+sidebar: true
+---
+
+import { Playground } from 'docz'
+import Label from './index';
+
+# Label
+
+## Basic usage
+
+<Playground>
+  <Label name="name" value="value" />
+</Playground>
+
+## Properties
+
+| 属性 | 说明 | 类型 | 默认值 |
+| ---- | ---- | ---- | ---- |
+| className | 自定义样式 | string，只支持 CSS Module | 无 |
+| name | 标签的 key | string | 无 |
+| value | 标签的 value | string | 无 |

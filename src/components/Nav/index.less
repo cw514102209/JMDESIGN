@@ -1,0 +1,64 @@
+@import '../../less/variables.less';
+
+.jm_nav_main {
+  display: flex;
+  align-items: center;
+  padding: 8px 14px;
+  border-radius: @border-radius;
+  background-color: @card-bg-color;
+
+  &.jm_nav_dark {
+    display: inline-block;
+    padding: 2px;
+    border: 1px solid @border-color;
+    border-radius: 16px;
+    background-color: @dark;
+
+    .jm_nav_item {
+      display: inline-block;
+      margin: 0;
+      padding: 0 10px;
+      min-width: 100px;
+      height: 28px;
+      line-height: 28px;
+      color: @white;
+      font-weight: 500;
+      border-radius: 14px;
+      border: 0 none;
+      text-align: center;
+      transition: all @trans-speed ease-in-out;
+
+      &:hover {
+        background-color: @dark-color03;
+      }
+
+      &.active {
+        background-color: @dark;
+        color: @white;
+      }
+    }
+  }
+}
+
+.jm_nav_item {
+  min-width: 96px;
+  padding: 0 10px;
+  height: 32px;
+  line-height: 32px;
+  margin: 0 6px;
+  font-weight: 400;
+  color: @second-title-color;
+  text-align: center;
+  border: 1px solid transparent;
+  transition: all @trans-speed;
+
+  &.active {
+    border-radius: 100px;
+    border-color: @border-color;
+    background-color: @bg-color;
+
+    &:hover {
+      color: @second-title-color;
+    }
+  }
+}

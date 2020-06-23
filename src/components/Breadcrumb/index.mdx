@@ -1,0 +1,37 @@
+---
+name: Breadcrumb
+route: /Breadcrumb
+sidebar: true
+---
+
+import { Playground } from 'docz'
+import { Router } from 'react-router-dom'
+import { history } from '../../utils/history'
+import Breadcrumb from './index';
+import { routes } from './schemas'
+
+# Breadcrumb
+
+## Basic usage
+
+<Playground>
+  <Router history={history}>
+    <Breadcrumb routes={routes} />
+    <br />
+    <Breadcrumb
+      backIcon
+      separator="|"
+      routes={routes}
+    />
+  </Router>
+</Playground>
+
+## Properties
+
+| 属性 | 说明 | 类型 | 默认值 |
+| ---- | ---- | ---- | ---- |
+| className | 自定义样式 | string，只支持 CSS Module | 无 |
+| routes | router 的路由栈信息 | array | [] |
+| separator | 分隔符自定义 | string 或 ReactNode | '/' |
+| backIcon | 是否显示返回图标 | bool | false |
+| goBack | 点击返回按钮时的回调 | func | window.history.back() |

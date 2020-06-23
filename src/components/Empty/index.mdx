@@ -1,0 +1,27 @@
+---
+name: Empty
+route: /Empty
+sidebar: true
+---
+
+import { Playground } from 'docz'
+import Empty from './index';
+import image from '../../assets/yay.jpg'
+
+# Empty
+
+## Basic usage
+
+<Playground>
+  <Empty />
+  <Empty image={image} imageStyle={{ width: 100 }} description="description"/>
+</Playground>
+
+## Properties
+
+| 属性 | 说明 | 类型 | 默认值 |
+| ---- | ---- | ---- | ---- |
+| className | 自定义样式 | string，只支持 CSS Module | 无 |
+| image | 图片类头像的资源地址 | string | 无 |
+| description | Empty 的描述 | string | 无 |
+| imageStyle | 图片样式， 支持 React 格式样式 | object | 无 |

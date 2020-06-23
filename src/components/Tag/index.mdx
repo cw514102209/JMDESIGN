@@ -1,0 +1,27 @@
+---
+name: Tag
+route: /Tag
+sidebar: true
+---
+
+import { Playground } from 'docz'
+import Tag from './index';
+
+# Tag
+
+## Basic usage
+
+<Playground>
+  <Tag>default</Tag>
+  <br /><br />
+  <Tag type="warning">warning</Tag>
+  <br /><br />
+  <Tag type="primary">primary</Tag>
+</Playground>
+
+## Properties
+
+| 属性 | 说明 | 类型 | 默认值 |
+| ---- | ---- | ---- | ---- |
+| className | 自定义样式 | string，只支持 CSS Module | 无 |
+| type | Tag 的类型，可选值为 'primary'，'default'，'warning' | string | 无 |

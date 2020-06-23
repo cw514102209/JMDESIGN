@@ -1,0 +1,26 @@
+---
+name: Text
+route: /Text
+sidebar: true
+---
+
+import { Playground } from 'docz'
+import Text from './index';
+
+# Text
+
+## Basic usage
+
+<Playground>
+  <Text icon="home" title="title" description="description" />
+  <Text title="title" description="description" />
+</Playground>
+
+## Properties
+
+| 属性 | 说明 | 类型 | 默认值 |
+| ---- | ---- | ---- | ---- |
+| className | 自定义样式 | string，只支持 CSS Module | 无 |
+| icon | 图标类型。遵循图标的命名规范 | string | 无 |
+| title | Text 的信息 | string | 无 |
+| description | Text 的描述信息 | string | 无 |

@@ -1,0 +1,28 @@
+@import '../../less/variables.less';
+
+.jm_breadcrumb_wrapper {
+  a {
+    display: inline-block;
+    vertical-align: middle;
+    color: @second-title-color;
+  }
+
+  a:hover {
+    color: @primary;
+  }
+
+  svg {
+    transform: translateY(6px);
+    margin-right: 6px;
+    cursor: pointer;
+
+    &:hover {
+      color: @primary;
+    }
+  }
+
+  .jm_breadcrumb_split {
+    display: inline-block;
+    margin: 0 6px;
+  }
+}

@@ -1,0 +1,51 @@
+---
+name: Card
+route: /Card
+sidebar: true
+---
+
+import { Playground } from 'docz'
+import Card from './index';
+
+# Card
+
+## Basic usage
+
+<Playground>
+  <Card title="title" extra='extra'>
+    content
+  </Card>
+  <br/>
+  <Card type="selector" title="title" extra='extra'>
+    content
+  </Card>
+  <br/>
+  <Card header="header">
+    content
+  </Card>
+  <br/>
+  <Card isEmpty empty="empty" title="title" extra='extra'>
+    content
+  </Card>
+  <br/>
+  <Card loading>
+    content
+  </Card>
+</Playground>
+
+## Properties
+
+| 属性 | 说明 | 类型 | 默认值 |
+| ---- | ---- | ---- | ---- |
+| className | 自定义样式 | string，只支持 CSS Module | 无 |
+| type | 卡片的类型 | string, 可选值为 'default', 'selector' | 'default' |
+| loading | 是否显示加载动画 | bool | 无 |
+| title | 卡片的信息， 在没有 header 时有效 | string 或 ReactNode | 无 |
+| extra | 卡片的额外信息 | string 或 ReactNode | 无 |
+| empty | 空信息 | string 或 ReactNode | 无 |
+| isEmpty | 是否展示空信息 | bool | false |
+| bodyStyle | 用于设置 Card 主体的样式 | string，只支持 CSS Module | 无 |
+| header | 卡片的信息，优先级大于 title | ReactNode | 无 |
+| headStyle | 用于设置 Card 头部的样式 | string，只支持 CSS Module | 无 |
+
+支持任何适用于 div 的属性

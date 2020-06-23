@@ -1,0 +1,66 @@
+---
+name: Alter
+route: /Alter
+sidebar: true
+---
+
+import { Playground } from 'docz'
+import Alter from './index';
+
+# Alter
+
+## Basic usage
+
+<Playground>
+  <Alter
+    closable
+    showIcon
+    message="default"
+    description="This is an default message about copywriting."
+  />
+  <br />
+  <Alter
+    closable
+    showIcon
+    type="info"
+    message="info"
+    description="This is an default info about copywriting."
+  />
+  <br />
+  <Alter
+    closable
+    showIcon
+    type="success"
+    message="success"
+    description="This is an default success about copywriting."
+  />
+  <br />
+  <Alter
+    closable
+    showIcon
+    type="warning"
+    message="warning"
+    description="This is an default warning about copywriting."
+  />
+  <br />
+  <Alter
+    closable
+    showIcon
+    type="error"
+    message="error"
+    description="This is an default error about copywriting."
+  />
+</Playground>
+
+## Properties
+
+| 属性 | 说明 | 类型 | 默认值 |
+| ---- | ---- | ---- | ---- |
+| className | 自定义样式，只支持 CSS Module | string | 无 |
+| type | 设置 Alter 类型，可选值为 'success', 'info', 'error', 'warning', 'default' | string | 'default' |
+| showIcon | 是否显示 Alter 左侧图标 | bool | false |
+| icon | 左侧图标 | string | 无 |
+| message | 提示的信息 | string | 无 |
+| description | 提示的描述 | string | 无 |
+| closable | 是否可关闭 | bool | false |
+| closeText | 自定义关闭文字 | string 或 ReactNode | 无 |

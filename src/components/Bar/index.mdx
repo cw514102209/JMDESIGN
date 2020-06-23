@@ -1,0 +1,39 @@
+---
+name: Bar
+route: /Bar
+sidebar: true
+---
+
+import { Playground } from 'docz'
+import Bar from './index';
+
+# Bar
+
+## Basic usage
+
+<Playground>
+  <Bar
+    text={`已使用 ${Number((0.5 * 100).toFixed(2))}%`}
+    value={0.5}
+  />
+  <br />
+  <Bar
+    text={`已使用 ${Number((0.8 * 100).toFixed(2))}%`}
+    value={0.8}
+  />
+  <br />
+  <Bar
+    text={`已使用 ${Number((0.95 * 100).toFixed(2))}%`}
+    value={0.95}
+    rightText="上不封顶"
+  />
+</Playground>
+
+## Properties
+
+| 属性 | 说明 | 类型 | 默认值 |
+| ---- | ---- | ---- | ---- |
+| className | 自定义样式 | string，只支持 CSS Module | 无 |
+| value | 进度条的值 | number，必传值，可传值在 0 - 1 之间 | 0 |
+| text | 进度条的信息 | string | 无 |
+| rightText | 进度条右侧的信息 | string | 无 |

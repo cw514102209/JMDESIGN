@@ -1,0 +1,33 @@
+---
+name: ScrollLoad
+route: /ScrollLoad
+sidebar: true
+---
+
+import { Playground } from 'docz'
+import ScrollLoad from './react';
+
+# ScrollLoad
+
+## Basic usage
+
+<Playground>
+  <ScrollLoad />
+</Playground>
+
+## Properties
+
+| 属性 | 说明 | 类型 | 默认值 |
+| ---- | ---- | ---- | ---- |
+| className | 自定义样式，只支持 CSS Module | string | 无 |
+| wrapperClassName | ScrollLoad 外层样式，只支持 CSS Module | string | '' |
+| width | ScrollLoad 的宽度 | number 或 string | '100%' |
+| minHeight | ScrollLoad 的最小高度 | number 或 string | 无 |
+| height | ScrollLoad 的高度 | string | '100%' |
+| loading | 是否展示滚动加载动画 | bool | true |
+| data | ScrollLoad 的数据 | array | [] |
+| page | 数据页数 | number | 1 |
+| total | 数据总数 | number | 10 |
+| isEmpty | 是否没有数据 | bool | false |
+| empty | 没有数据时的替换内容 | string 或 ReactNode | 无 |
+| onFetch | 滚动加载数据的回调 | func | function() {} |
